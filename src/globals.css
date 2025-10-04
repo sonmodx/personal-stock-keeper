@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import 'react-datepicker/dist/react-datepicker.css';
+
+.react-datepicker-wrapper .react-datepicker__input-container input {
+  @apply mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150;
+}
+/* Added for Inter font */
+body {
+  font-family: 'Inter', sans-serif; /* Or 'Lato', sans-serif; if you chose Lato */
+}
+
+/* Existing Modal Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes slideUpFade {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-up-fade {
+  animation: slideUpFade 0.3s ease-out forwards;
+}
+
+/* --- NEW/UPDATED: Global Keyframe Animations for Toast --- */
+
+/* Combined Fade-In and Slide-In from Right */
+@keyframes customFadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End on-screen */
+  }
+}
+
+/* Combined Fade-Out and Slide-Out to Right */
+@keyframes customFadeOutSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0); /* Start on-screen */
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%); /* End off-screen right */
+  }
+}
+
+/* Tailwind utility classes for these animations */
+.animate-custom-fade-in-slide-in {
+  animation: customFadeInSlideIn 0.5s ease-out forwards; /* Matches the 500ms delay in JS */
+}
+
+.animate-custom-fade-out-slide-out {
+  animation: customFadeOutSlideOut 0.5s ease-out forwards; /* Matches the 500ms delay in JS */
+}
