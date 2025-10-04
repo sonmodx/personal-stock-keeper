@@ -1,12 +1,38 @@
-# React + Vite
+# StockPilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StockPilot is a modern inventory and memory management web application built with React, Firebase, and Tailwind CSS. It helps you track stock items, manage categories, monitor low stock, and record memorable events.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (Email/Password & Google)
+- Dashboard with analytics (total items, low stock alerts, inventory value, categories)
+- Inventory management: add, edit, delete, and filter stock items
+- Category-based browsing and filtering
+- Low stock alerts
+- Memory management: add memories and attach dated events
+- Responsive UI with Tailwind CSS
+- Toast notifications for user feedback
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)
+- [Firebase (Firestore, Auth)](https://firebase.google.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [Date-fns](https://date-fns.org/)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- Firebase project (for your own deployment)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/sonmodx/personal-stock-keeper.git
+   cd personal-stock-keeper
+   ```
