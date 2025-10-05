@@ -11,7 +11,21 @@ const PrivateRoute = ({ children }) => {
     return unsubscribe;
   }, []);
 
-  if (user === undefined) return <div>Loading...</div>;
+  if (user === undefined)
+    return (
+      // Verifying user...
+      // Todo: Add a loading animation here for better UX when loading user state
+      // approach1: Full loading screen with backdrop
+      <></>
+      // <div className="w-full max-w-md mx-auto">
+      //   <dotlottie-wc
+      //     src="https://lottie.host/b33e9fc3-d89e-4d41-b9e4-3a57ef3cd717/Hn48ziTxSw.lottie"
+      //     style={{ width: "100%", height: "auto" }}
+      //     autoplay
+      //     loop
+      //   ></dotlottie-wc>
+      // </div>
+    );
 
   return user ? children : <Navigate to="/login" />;
 };
