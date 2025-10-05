@@ -26,11 +26,10 @@ function App() {
   const mainBgColorMap = MAPPING_MAIN_BACKGROUND_COLOR;
   const colorBundelSet =
     mainBgColorMap[elementColor] || mainBgColorMap["white"];
-
   return (
     <ToastProvider>
       <GlobalProvider>
-        <div className={`font-sans  min-h-screen ${colorBundelSet}`}>
+        <div className={`font-sans ${colorBundelSet} min-h-screen`}>
           <Navbar />
           <main className="container mx-auto p-8 py-24">
             {/* Added mt-4 for spacing below navbar */}
