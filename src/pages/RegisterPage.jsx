@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUser, AiOutlineMail, AiOutlineLock } from "react-icons/ai";
 
 function RegisterPage() {
@@ -81,6 +81,7 @@ function RegisterPage() {
     <div className="flex items-center justify-center mt-8">
       <form
         onSubmit={handleRegister}
+        autoComplete="off"
         className="bg-white p-8 rounded-2xl shadow-xl w-96"
       >
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
@@ -146,6 +147,7 @@ function RegisterPage() {
           <input
             type="password"
             placeholder="Enter your password"
+            autoComplete="new-password"
             className={`w-full p-3 pl-10 border rounded-lg focus:ring-2 focus:outline-none ${
               fieldErrors.password?.length > 0
                 ? "border-red-500 focus:ring-red-400"
@@ -211,12 +213,12 @@ function RegisterPage() {
         {/* Login Link */}
         <p className="text-sm mt-6 text-center text-gray-600">
           Already have an account?{" "}
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="text-yellow-600 font-medium hover:underline"
           >
             Login here
-          </a>
+          </Link>
         </p>
       </form>
     </div>

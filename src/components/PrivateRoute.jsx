@@ -16,15 +16,17 @@ const PrivateRoute = ({ children }) => {
       // Verifying user...
       // Todo: Add a loading animation here for better UX when loading user state
       // approach1: Full loading screen with backdrop
-      <></>
-      // <div className="w-full max-w-md mx-auto">
-      //   <dotlottie-wc
-      //     src="https://lottie.host/b33e9fc3-d89e-4d41-b9e4-3a57ef3cd717/Hn48ziTxSw.lottie"
-      //     style={{ width: "100%", height: "auto" }}
-      //     autoplay
-      //     loop
-      //   ></dotlottie-wc>
-      // </div>
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm z-[9999]">
+        <dotlottie-wc
+          src="https://lottie.host/b33e9fc3-d89e-4d41-b9e4-3a57ef3cd717/Hn48ziTxSw.lottie"
+          style={{ width: "180px", height: "180px" }}
+          autoplay
+          loop
+        ></dotlottie-wc>
+        <p className="text-white mt-4 text-lg font-medium animate-pulse">
+          Loading ...
+        </p>
+      </div>
     );
 
   return user ? children : <Navigate to="/login" />;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase/firebaseConfig";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 function LoginPage() {
@@ -151,12 +151,12 @@ function LoginPage() {
 
         <p className="text-sm mt-6 text-center text-gray-600">
           Don't have an account?{" "}
-          <a
-            href="/register"
+          <Link
+            to="/register"
             className="text-blue-500 font-medium hover:underline"
           >
             Register here
-          </a>
+          </Link>
         </p>
       </form>
     </div>
